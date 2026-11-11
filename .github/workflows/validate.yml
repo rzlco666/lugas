@@ -1,0 +1,107 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Validate skills and docs
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+
+          root = pathlib.Path(".")
+          errors = []
+
+          def fail(msg):
+              errors.append(msg)
+
+          # 1. Every skill has frontmatter (name, description, user-invocable)
+          #    and a non-empty VERSION file.
+          skills_dir = root / "skills"
+          for skill in sorted(skills_dir.iterdir()):
+              if not skill.is_dir():
+                  continue
+              sk = skill / "SKILL.md"
+              if not sk.exists():
+                  fail(f"{skill}: missing SKILL.md")
+                  continue
+              text = sk.read_text(encoding="utf-8")
+              parts = text.split("---", 2)
+              if len(parts) < 3 or not text.startswith("---"):
+                  fail(f"{skill}: missing YAML frontmatter")
+                  continue
+              fm = {}
+              for line in parts[1].strip().splitlines():
+                  if ":" in line:
+                      k, v = line.split(":", 1)
+                      fm[k.strip()] = v.strip()
+              for key in ("name", "description", "user-invocable"):
+                  if key not in fm:
+                      fail(f"{skill}: frontmatter missing '{key}'")
+              version = skill / "VERSION"
+              if not version.exists() or not version.read_text(encoding="utf-8").strip():
+                  fail(f"{skill}: missing or empty VERSION")
+
+          # 2. Every relative link target in every Markdown file exists.
+          #    Exception: the brand assets land with v1.1.0 (see ROADMAP.md),
+          #    so their paths are allowed to be missing until then.
+          allowed_missing = {"assets/banner.png", "assets/logo.svg",
+                             "assets/social-preview.png"}
+          link_re = re.compile(r"!?\[[^\]]*\]\(([^)\s]+)\)")
+          for md in sorted(root.rglob("*.md")):
+              if ".git" in md.parts:
+                  continue
+              for target in link_re.findall(md.read_text(encoding="utf-8")):
+                  if target.startswith(("http://", "https://", "mailto:", "#")):
+                      continue
+                  target = target.split("#", 1)[0]
+                  if not target or target in allowed_missing:
+                      continue
+                  if not (md.parent / target).exists():
+                      fail(f"{md}: broken relative link '{target}'")
+
+          # 3. Every install command / external link in the README points at
+          #    this repo: URLs must name rzlco666/lugas, bare plugin commands
+          #    must name the lugas plugin.
+          readme = (root / "README.md").read_text(encoding="utf-8")
+          url_triggers = ("github.com", "raw.githubusercontent.com", "skills.sh",
+                          "star-history", "contrib.rocks")
+          cmd_triggers = ("npx skills", "codex plugin", "omp plugin", "pi install",
+                          "cline plugin", "agent plugin", "/plugin", "/plugins")
+          for line in readme.splitlines():
+              if line.lstrip().startswith("#"):
+                  continue  # headings mention names, they are not commands
+              if any(t in line for t in url_triggers) and "rzlco666/lugas" not in line:
+                  fail(f"README: link without rzlco666/lugas: {line.strip()[:120]}")
+              if any(t in line for t in cmd_triggers) and "lugas" not in line:
+                  fail(f"README: command without lugas: {line.strip()[:120]}")
+
+          # 4. Docs must not reference other repos, people, or gists.
+          banned = re.compile(r"rasa-plain|orepras|miqdad|anti-slop|\bgist\b", re.IGNORECASE)
+          for path in sorted(root.rglob("*.md")):
+              if ".git" in path.parts:
+                  continue
+              if "skills" in path.parts or "examples" in path.parts:
+                  continue
+              m = banned.search(path.read_text(encoding="utf-8"))
+              if m:
+                  fail(f"{path}: forbidden reference '{m.group(0)}'")
+
+          if errors:
+              print("Validation failed:")
+              for e in errors:
+                  print(f"  - {e}")
+              sys.exit(1)
+          print("All checks passed.")
+          PY
