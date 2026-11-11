@@ -8,7 +8,22 @@ user-invocable: true
 
 Tulisan yang baik dalam bahasa Indonesia bukan tulisan yang paling panjang atau paling resmi. Tulisan yang baik adalah tulisan yang dipahami pembaca pada bacaan pertama, tanpa perlu membaca ulang, menebak maksud, atau bertanya ke orang lain.
 
-Skill ini berlaku untuk semua prosa yang kamu hasilkan dalam bahasa Indonesia: teks antarmuka, email, laporan, panduan, pengumuman, dan dokumentasi. Tujuannya satu: pembaca tahu apa yang terjadi, apa yang harus dilakukan, dan apa akibatnya — dalam waktu sesingkat mungkin.
+Skill ini berlaku untuk semua prosa yang kamu hasilkan dalam bahasa Indonesia: teks antarmuka, email, laporan, panduan, pengumuman, dan dokumentasi. Tujuannya satu: pembaca tahu apa yang terjadi, apa yang harus dilakukan, dan apa akibatnya — dalam waktu sesingkat mungkin. Kalau teks yang kamu tulis berbahasa Inggris, atau pembacanya bukan penutur bahasa Indonesia, pakai skill saudara skill ini, english-plain — kerangka RASA-nya sama, bahasanya yang berbeda.
+
+## Mulai Cepat 60 Detik
+
+Tidak sempat membaca seluruh skill ini? Cukup lakukan ini:
+
+1. Tempel teks yang mau kamu perbaiki, lalu beri satu perintah: `Perbaiki teks ini dengan skill bahasa-indonesia-plain.`
+2. Tunggu hasil rewrite-nya, lalu periksa tiga hal di bawah sebelum memakai teks itu.
+
+Tiga aturan yang memperbaiki 80% teks yang buruk:
+
+1. **Poin dulu.** Kalimat pertama menyampaikan hal terpenting atau tindakan utama. Jangan simpan poinnya di akhir.
+2. **Satu ide per kalimat.** Kalau satu kalimat memuat dua tindakan atau dua informasi, pecah menjadi dua kalimat.
+3. **Kata sehari-hari.** Ganti kata birokrasi dan jargon dengan kata yang dipakai pembaca sehari-hari — `bayar`, bukan `melakukan pembayaran`.
+
+Kalau tiga aturan ini sudah lulus, lanjut ke alur kerja 5 langkah dan rubrik RASA di bawah untuk hasil yang lebih rapi.
 
 ## Dua Mode Penggunaan
 
@@ -87,6 +102,17 @@ Uji drafmu dengan rubrik RASA di bawah. Skor tiap dimensi 0–2. Lulus bila tota
 ### Langkah 5 — Cek mandiri + laporan perubahan
 
 Jalankan daftar periksa mandiri di akhir skill ini. Lalu sampaikan hasil kerjamu dengan format laporan penyerahan: ringkasan perubahan, skor RASA per dimensi, dan apa yang sengaja kamu pertahankan beserta alasannya.
+
+## Pohon Keputusan — Skill Mana yang Dipakai?
+
+Ikuti dari atas. Berhenti di cabang pertama yang cocok.
+
+- **Teksnya berbahasa Inggris, atau pembacanya bukan penutur bahasa Indonesia?** → Pakai skill **english-plain**. Jangan pakai skill ini untuk teks berbahasa Inggris.
+- **Teksnya berbahasa Indonesia dan harus dipahami pada bacaan pertama?** → Pakai skill ini, **bahasa-indonesia-plain**. Lanjut ke alur kerja 5 langkah.
+- **Belum ada teks sama sekali, hanya ide atau topik?** → Tulis dari nol dengan skill ini (Mode Tulis): pahami brief dan pembaca dulu, baru draf dengan piramida terbalik.
+- **Sudah ada teks, tapi teks itu harus mengikuti aturan gaya tertentu?** → Ikuti **panduan gaya (style guide)** yang berlaku dulu — nama produk, istilah wajib, sapaan resmi — lalu pakai skill ini untuk sisanya. Kalau panduan gaya bertentangan dengan skill ini, panduan gaya yang menang, dan catat pengecualiannya di laporan penyerahan.
+- **Teks itu kutipan langsung, kode, atau tabel data?** → Jangan ubah. Lihat **Catatan Cakupan** di akhir skill ini: kutipan dikutip apa adanya, kode mengikuti konvensi proyek, tabel mengikuti format datanya.
+- **Ragu antara skill ini dan menulis bebas?** → Pakai skill ini. Menulis bebas hanya untuk draf kasar yang memang tidak akan dibaca orang lain.
 
 ## Target Keterbacaan
 
@@ -200,6 +226,38 @@ Jangan revisi semuanya sekaligus. Lakukan empat putaran, satu dimensi per putara
 2. **Pass Akurat — periksa fakta.** Periksa angka, tanggal, nama, syarat, dan tautan. Pastikan setiap klaim bisa dipertanggungjawabkan. Pastikan tidak ada kalimat yang bisa dibaca dua arah.
 3. **Pass Sarat Makna — hapus yang sia-sia.** Hapus kalimat pengisi, klise, dan pengulangan. Kalau satu kalimat bisa dihapus tanpa kehilangan makna, hapus.
 4. **Pass Alami — dengarkan nadanya.** Baca lagi sebagai pembaca. Ganti kata birokrasi dengan kata sehari-hari. Pastikan sapaan konsisten. Pastikan nada sesuai dengan pembaca dan situasinya.
+
+### Contoh Audit RASA — Pengumuman Layanan Publik
+
+Satu paragraf kaku (85 kata) diaudit penuh, lalu ditulis ulang. Perhatikan bagaimana skornya berubah.
+
+**Teks asli:**
+
+> Sehubungan dengan adanya kegiatan pemeliharaan jaringan air bersih yang akan dilaksanakan oleh Perusahaan Daerah Air Minum dalam rangka peningkatan kualitas pelayanan kepada seluruh pelanggan, bersama ini kami sampaikan bahwa pelayanan pendistribusian air bersih kepada masyarakat di wilayah Kecamatan Sukamaju dan sekitarnya akan mengalami gangguan sementara pada hari Sabtu, tanggal 13 Juni 2026, mulai pukul 08.00 sampai dengan pukul 17.00, dan masyarakat diharapkan untuk dapat melakukan penampungan air secukupnya sebelum waktu yang telah ditentukan tersebut, serta kami mohon pengertian atas ketidaknyamanan yang ditimbulkan oleh kegiatan ini.
+
+**Skor SEBELUM — total 1/8, belum lulus:**
+
+- **Ritmis: 0** — satu kalimat 85 kata; pembaca kehabisan napas sebelum sampai ke tanggalnya.
+- **Akurat: 1** — tanggal dan jam ada, tapi wilayahnya kabur: "Sukamaju dan sekitarnya" tidak jelas batasnya.
+- **Sarat Makna: 0** — pembuka "sehubungan dengan adanya kegiatan ... dalam rangka peningkatan kualitas pelayanan" tidak menambah informasi apa pun.
+- **Alami: 0** — penuh klise birokrasi ("bersama ini kami sampaikan", "diharapkan untuk dapat melakukan penampungan") yang tidak dipakai orang dalam percakapan.
+
+**Teks sesudah rewrite:**
+
+> **Air di Sukamaju mati pada Sabtu, 13 Juni 2026, pukul 08.00–17.00.**
+>
+> Kami memperbaiki jaringan pipa air bersih. Tampung air secukupnya sebelum pukul 08.00.
+>
+> Air kembali mengalir setelah pukul 17.00. Maaf atas gangguan ini.
+
+**Skor SESUDAH — total 8/8, lulus:**
+
+- **Ritmis: 2** — kalimat terpanjang 11 kata; panjang kalimat bervariasi dan mudah dibaca keras-keras.
+- **Akurat: 2** — tanggal, jam mulai, dan jam selesai ditulis konkret; tidak ada wilayah kabur.
+- **Sarat Makna: 2** — setiap kalimat membawa informasi baru: apa, kapan, apa yang harus dilakukan, kapan selesai.
+- **Alami: 2** — kata sehari-hari ("mati", "tampung air") dengan sapaan yang konsisten; terasa seperti pengumuman yang diucapkan, bukan dibacakan dari surat.
+
+Pelajaran dari audit ini: skor yang gagal hampir selalu berawal dari kalimat pertama yang menyimpan poin di akhir. Pindahkan poin ke depan, dan tiga dimensi lainnya biasanya ikut membaik.
 
 ## Template Siap Salin
 
@@ -411,6 +469,30 @@ Setiap pasangan memakai format: **Sebelum** (buruk) → **Sesudah** (baik) → *
 - **Sesudah:** `**Cara minta pengembalian dana:** Buka Riwayat Pesanan, pilih pesanan Anda, lalu pilih Minta pengembalian dana. Dana kembali dalam 3–5 hari kerja.`
 - **Kenapa:** Judul pertanyaan langsung + langkah konkret — bagian bantuan menjawab, bukan mengulang pertanyaan.
 
+### 13. Ketentuan kecil (legal / keuangan)
+
+- **Sebelum:** `Dengan menekan tombol setuju, Anda menyatakan telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku, termasuk namun tidak terbatas pada ketentuan mengenai biaya layanan, kebijakan pengembalian dana, dan perubahan tarif yang dapat dilakukan sewaktu-waktu tanpa pemberitahuan terlebih dahulu.`
+- **Sesudah:** `Dengan menekan Setuju, Anda menyetujui syarat dan ketentuan ini, termasuk biaya layanan dan kebijakan pengembalian dana. Kami akan memberi tahu Anda sebelum tarif berubah.`
+- **Kenapa:** Sarat Makna + Akurat — klausul "dapat berubah sewaktu-waktu tanpa pemberitahuan" yang merugikan pembaca diganti janji pemberitahuan yang jelas.
+
+### 14. Petunjuk kesehatan
+
+- **Sebelum:** `Apabila setelah mengonsumsi obat ini Anda mengalami gejala seperti mual, pusing, atau ruam pada kulit, maka Anda diharapkan untuk segera menghentikan penggunaan obat tersebut dan melakukan konsultasi dengan dokter atau tenaga kesehatan yang menangani Anda.`
+- **Sesudah:** `Berhenti minum obat ini dan hubungi dokter kalau Anda mual, pusing, atau muncul ruam di kulit.`
+- **Kenapa:** Ritmis + Akurat — peringatan keselamatan dipotong dari 35 kata menjadi 16 kata supaya dibaca dan dilakukan, bukan dilewati.
+
+### 15. Error + coba lagi
+
+- **Sebelum:** `Permintaan Anda tidak dapat diproses pada saat ini dikarenakan terjadinya gangguan pada server kami. Silakan coba beberapa saat lagi. Apabila masalah ini terus berlanjut, silakan hubungi layanan pelanggan kami.`
+- **Sesudah:** `Gagal menyimpan. Server kami sedang gangguan — coba lagi dalam 5 menit. Kalau masih gagal, hubungi kami di 1500-123. Data Anda sudah tersimpan, tidak ada yang hilang.`
+- **Kenapa:** Akurat + Alami — sebut masalahnya, beri waktu tunggu yang konkret, dan tenangkan pembaca soal datanya yang aman.
+
+### 16. Ringkasan eksekutif laporan
+
+- **Sebelum:** `Pada triwulan ini, program pemberdayaan masyarakat yang telah dilaksanakan oleh tim kami telah menunjukkan perkembangan yang cukup baik, dengan berbagai macam kegiatan yang telah dilakukan di sejumlah wilayah, dan diharapkan program ini dapat terus berlanjut serta memberikan manfaat yang lebih besar lagi pada periode-periode berikutnya.`
+- **Sesudah:** `Program pemberdayaan masyarakat menjangkau 1.240 warga di 12 desa pada triwulan ini — naik 18% dari triwulan lalu. Tantangan terbesar: 3 desa belum punya pendamping. Anggaran triwulan depan: Rp450 juta, termasuk Rp120 juta untuk merekrut 3 pendamping baru.`
+- **Kenapa:** Sarat Makna + Akurat — "cukup baik" dan "berbagai macam kegiatan" diganti jumlah warga, jumlah desa, persen kenaikan, dan angka anggaran yang bisa diperiksa.
+
 ## EYD — Ejaan yang Benar
 
 Tulisan plain tetap harus benar ejaannya. Kesalahan ejaan merusak kepercayaan pembaca, terutama di layanan publik dan dokumen resmi.
@@ -484,6 +566,15 @@ Tulisan plain harus bisa dibaca semua orang — termasuk pembaca dengan disabili
 - **Satu tugas dalam satu waktu:** jangan minta pembaca melakukan dua hal sekaligus dalam satu kalimat. Pecah menjadi langkah bernomor.
 - **Konsisten:** tombol, label, dan istilah yang sama harus selalu bernama sama di seluruh produk. Jangan ganti `Simpan` menjadi `Simpan perubahan` menjadi `Konfirmasi` untuk tindakan yang sama.
 
+## Bahasa Daerah dan Ragam
+
+Bahasa Indonesia dipakai di seluruh Indonesia — pembacanya tidak semuanya orang Jakarta, dan tidak semuanya memakai kata yang sama untuk hal yang sama.
+
+- **Istilah daerah boleh dipakai kalau membantu.** Kalau sebuah istilah daerah lebih dipahami pembaca setempat daripada padanan bahasa Indonesianya, pakai istilah itu — tapi beri penjelasan singkat saat pertama kali muncul: `gotong royong (kerja bersama warga)`, `posyandu (pos pelayanan kesehatan desa)`. Setelah itu, pakai istilahnya saja.
+- **Glosari sekali, lalu konsisten.** Kalau sebuah istilah daerah muncul berulang kali, cukup jelaskan di pemakaian pertama. Jangan mengulang penjelasan yang sama di setiap paragraf.
+- **Jangan ganti istilah daerah dengan bahasa Jakarta.** `Warung` bukan `minimarket`. `Ojek` bukan `taksi motor`. Kalau pembaca setempat menyebutnya begitu, hormati sebutannya.
+- **Jebakan Jakarta-sentris:** jangan asumsikan semua pembaca tinggal di Jakarta, punya internet cepat, atau paham referensi kota besar. Jangan tulis `naik MRT` sebagai satu-satunya cara sampai ke suatu tempat, jangan asumsikan pembaca bisa mengunduh berkas besar kapan saja, dan jangan pakai contoh harga, tempat, atau layanan yang hanya ada di Jakarta tanpa alternatif. Tulis petunjuk yang berlaku di mana pun pembaca berada — atau sebut jelas wilayahnya kalau memang hanya berlaku di satu tempat.
+
 ## Jebakan yang Sering Terjadi
 
 ### Terjemahan harfiah dari Inggris
@@ -541,6 +632,43 @@ Kata ini tidak menambah makna. Hapus.
 - `sebenarnya` — hapus, kecuali memang ada kontras dengan dugaan
 - `tentunya` — hapus
 - `sangat` yang berulang — `sangat penting sekali` → `penting`
+
+## Kesalahan yang Sering Terjadi
+
+Delapan kegagalan yang paling sering muncul — lengkap dengan contoh salah, perbaikannya, dan dimensi RASA yang dirusaknya.
+
+1. **Menyembunyikan poin di akhir.**
+   - Salah: `Sehubungan dengan hal tersebut, kami sampaikan bahwa mulai 1 Juli 2026 tarif air naik.`
+   - Perbaiki: `Tarif air naik mulai 1 Juli 2026.`
+   - Merusak: **Sarat Makna** — pembaca harus melewati pembuka yang kosong sebelum sampai ke informasi.
+2. **Menumpuk kata sopan.**
+   - Salah: `Dengan hormat, kami mohon dengan sangat kiranya Bapak/Ibu berkenan untuk dapat mengisi formulir ini.`
+   - Perbaiki: `Silakan isi formulir ini.`
+   - Merusak: **Alami** — tumpukan `dengan hormat`, `mohon dengan sangat`, dan `kiranya berkenan` membuat teks terasa seperti surat dinas, bukan ajakan.
+3. **Menumpuk kata benda.**
+   - Salah: `pelaksanaan kegiatan peningkatan kualitas pelayanan publik`
+   - Perbaiki: `memperbaiki layanan publik`
+   - Merusak: **Ritmis** — deretan kata benda tanpa kata kerja membuat kalimat berat dan lambat dibaca.
+4. **Urgensi palsu.**
+   - Salah: `Segera! Penawaran terakhir! Jangan sampai ketinggalan — daftar sekarang juga!`
+   - Perbaiki: `Pendaftaran ditutup 30 Juni 2026. Daftar sebelum tanggal itu.`
+   - Merusak: **Akurat** — urgensi tanpa tanggal dan akibat nyata adalah tekanan, bukan informasi.
+5. **Rantai pasif.**
+   - Salah: `Formulir ini harus diisi dan dikirim sebelum tanggal yang telah ditentukan. Setelah itu, formulir akan diproses oleh petugas.`
+   - Perbaiki: `Isi dan kirim formulir ini sebelum 12 Juni 2026. Petugas kami akan memprosesnya dalam 3 hari kerja.`
+   - Merusak: **Alami** — pembaca kehilangan siapa yang harus bertindak dan siapa yang memproses.
+6. **Angka tanpa konteks.**
+   - Salah: `Kinerja meningkat 24% pada periode ini.`
+   - Perbaiki: `Pendaftar baru naik 24% pada Juni 2026 — dari 1.200 menjadi 1.488 orang.`
+   - Merusak: **Akurat** — persen tanpa angka awal, angka akhir, dan periode tidak bisa diperiksa kebenarannya.
+7. **Basa-basi minta maaf.**
+   - Salah: `Mohon maaf atas ketidaknyamanan ini, kami mohon pengertian Anda.`
+   - Perbaiki: `Maaf, pembayaran Anda gagal karena koneksi terputus. Periksa koneksi Anda, lalu coba lagi.`
+   - Merusak: **Sarat Makna** — permintaan maaf tanpa menyebut masalah dan tanpa langkah perbaikan tidak membantu pembaca.
+8. **Suara templat.**
+   - Salah: `Terima kasih telah menggunakan layanan kami. Kami berkomitmen untuk terus memberikan yang terbaik bagi Anda.`
+   - Perbaiki: `Terima kasih sudah membayar. Bukti pembayaran sudah kami kirim ke email Anda.`
+   - Merusak: **Alami** — kalimat yang bisa ditempel di produk apa pun berarti tidak mengatakan apa-apa tentang produk ini.
 
 ## Daftar Periksa Mandiri
 
@@ -603,6 +731,35 @@ Setiap tugas selesai — Mode Tulis maupun Mode Periksa — diakhiri dengan lapo
 ```
 
 Contoh bagian "Yang sengaja dipertahankan": istilah hukum yang wajib dipakai sesuai peraturan, nama produk resmi, atau kalimat pasif yang memang diperlukan karena pelakunya tidak diketahui.
+
+## Jembatan Dua Bahasa
+
+Tim yang bekerja dalam bahasa Indonesia dan bahasa Inggris memakai istilah yang sama untuk konsep yang sama. Tabel ini menjaga konsistensinya — pakai padanan ini di kedua bahasa, jangan membuat padanan baru sendiri.
+
+| Bahasa Indonesia | English |
+|---|---|
+| bahasa polos | plain language |
+| Ritmis | Rhythmic |
+| Akurat | Accurate |
+| Sarat Makna | Substantive |
+| Alami | Authentic |
+| ajakan | call to action |
+| sapaan | form of address |
+| kalimat aktif | active voice |
+| kalimat pasif | passive voice |
+| piramida terbalik | inverted pyramid |
+| kata sehari-hari | everyday word |
+| jargon | jargon |
+| klise | cliché |
+| daftar periksa | checklist |
+| laporan penyerahan | delivery report |
+| pesan error | error message |
+| empty state | empty state |
+| onboarding | onboarding |
+| diskalkulia | dyscalculia |
+| pembaca layar | screen reader |
+
+Skill saudara skill ini, english-plain, memakai glosarium yang sama — istilah di atas berarti sama di kedua skill.
 
 ## Catatan Cakupan
 
