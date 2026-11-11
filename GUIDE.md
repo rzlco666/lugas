@@ -2,6 +2,21 @@
 
 Full walkthrough for every supported agent, from zero to a working skill. For the one-command summary, see [README.md](README.md).
 
+## Try it in 60 seconds
+
+No install needed to see what Lugas does:
+
+1. Copy this stiff sentence:
+   > *Sehubungan dengan hal tersebut di atas, dengan ini kami sampaikan bahwa pelaksanaan kegiatan dimaksud akan dilaksanakan pada tanggal yang telah ditetapkan sebelumnya.*
+2. Paste it into a chat with any AI agent, together with the single file for your language:
+   ```bash
+   curl -o plain-id.md https://raw.githubusercontent.com/rzlco666/lugas/main/plain-id.md
+   ```
+   (or attach `plain-id.md` from this repo) and say: *"pakai skill ini untuk menulis ulang kalimat di atas, dan tunjukkan skor RASA-nya."*
+3. Compare. You should get something like *"Kegiatan ini jadi tanggal 12 November 2026."* — same meaning, a fraction of the words, with RASA scores showing why it passes.
+
+If you like the result, install properly below so the skill loads in every session.
+
 ## What gets installed
 
 Two skill folders:
@@ -157,7 +172,7 @@ curl -o plain-id.md https://raw.githubusercontent.com/rzlco666/lugas/main/plain-
 curl -o plain-en.md https://raw.githubusercontent.com/rzlco666/lugas/main/plain-en.md
 ```
 
-> Note: `plain-id.md` and `plain-en.md` are standalone single-file copies of the two skills. They will be added at the repo root shortly after the skills land.
+> `plain-id.md` and `plain-en.md` are standalone single-file copies of the two skills, kept at the repo root and updated with every release.
 
 ## Removal
 
@@ -172,6 +187,9 @@ curl -o plain-en.md https://raw.githubusercontent.com/rzlco666/lugas/main/plain-
 
 **Skill not loading / agent doesn't know the skill**
 Restart the agent session (or the whole app). Skills are usually discovered at session start; a running session will not see a newly installed skill. Then check the skill is where the agent looks — run `./install.sh --list` to see the installed locations, and compare with the table at the top of this guide.
+
+**Agent answers without using the skill**
+Name the skill explicitly in your message — *"pakai bahasa-indonesia-plain …"* or *"use english-plain …"* — instead of relying on the agent to pick it up from context. If both skills are installed and the agent picks the wrong language, say which one to use; the skill names are different on purpose.
 
 **Plugin marketplace errors**
 - `marketplace add` failing: check the URL is exactly `https://github.com/rzlco666/lugas` and that the repo is public and reachable (`curl -I https://github.com/rzlco666/lugas` should return 200).
@@ -189,3 +207,12 @@ Do not run the installer with `sudo` — it installs into your own home director
 
 **I only want one skill**
 Use `./install.sh --skills id` or `--skills en`, or download the single file for that skill (Route 10).
+
+**install.sh flags not working / unexpected output**
+Run `./install.sh --help` to see the supported flags (`--skills id|en|all`, `--global`/`--project`, `--list`). The installer needs `bash` plus `git` or `curl`; with neither it cannot download the skills, and it will say so instead of installing half a skill. A dry check: `./install.sh --list` prints where the skills are now, without changing anything.
+
+**skills.sh says the repo is not found**
+Check the name is exactly `rzlco666/lugas` (`npx skills add rzlco666/lugas`). If you just saw the repo announced, allow a few minutes for the directory listing to pick it up, then retry. The installer script (Route 2) works regardless of any directory listing.
+
+**The skill rewrites but drops a fact**
+That is a bug in the rewrite, not the skill's intent — Accuracy is a scored dimension, and a rewrite that changes meaning must fail. Tell the agent to keep the fact and re-score, or [open an issue](https://github.com/rzlco666/lugas/issues/new) with the before/after pair so the rule can be fixed.

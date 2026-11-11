@@ -14,6 +14,20 @@ Write English that anyone can understand on first read. No jargon, no filler, no
 - **Substantive** — it says something real, with evidence, not decoration.
 - **Authentic** — it sounds like a person, not a template.
 
+If you are writing in Bahasa Indonesia, or for readers who read best in Bahasa Indonesia, switch to the sibling skill bahasa-indonesia-plain — it uses the same RASA framework, in Indonesian.
+
+## 60-second quick start
+
+Smallest possible use: paste your text, then give one instruction — "Rewrite this in plain English, RASA pass, keep the meaning." That is enough to start.
+
+Three rules fix 80% of bad text:
+
+1. **Point first.** Put the point, the action, or the answer in the first sentence. Do not build up to it.
+2. **One idea per sentence.** If a sentence does two jobs, split it into two sentences.
+3. **Everyday word.** Use the word a reader would use in conversation — *use*, not *utilise*; *help*, not *facilitate*.
+
+If you have 60 seconds, do only those three. Then run the RASA pass when you have more time.
+
 ## Two modes
 
 On first activation in a session, ask the user which mode they want — unless they already said. State the resolved mode once, then work in it.
@@ -79,6 +93,17 @@ Run the four passes in this order (see [RASA rubric](#rasa-rubric-scored)):
 4. **Authentic** — remove corporate voice, stock phrases, and false warmth.
 
 ### Step 5 — Self-check and report
+
+Run the [self-check checklist](#self-check-checklist), fix what fails, then output the [delivery report](#delivery-report).
+
+## Decision tree — which skill, which mode
+
+- **If you are writing in Bahasa Indonesia, or for Indonesian readers** → use the sibling skill bahasa-indonesia-plain, not this one. This skill is for English text only.
+- **If the text already exists and you need to judge it first** → use this skill in Mode 2 — Review. Score it, list findings, wait for approval, then fix only what was approved.
+- **If you are starting from a blank page** → use this skill in Mode 1 — Write. Follow the 5-step workflow, then run the RASA pass.
+- **If your organisation has a style guide** → follow the guide for spelling, terms, and names, and use this skill for plainness: short sentences, everyday words, and the RASA test. When the guide and this skill disagree on a word, the guide wins for that word — say so in the delivery report.
+- **If the text is short — a button, an error message, a form label, a notification** → start from the [Templates](#templates) or the [Rewrite library](#rewrite-library). Do not run the full 5-step workflow for one line.
+- **If there is no style guide and no existing text** → write from scratch with this skill. Set the register in Step 2 (US or UK spelling, tone, voice), draft inverted pyramid, then score with RASA. Do not invent a style guide first.
 
 Run the [self-check checklist](#self-check-checklist), fix what fails, then output the [delivery report](#delivery-report).
 
@@ -233,6 +258,44 @@ Do the passes in this order. Do not skip ahead.
 2. **Accurate** — check every fact, number, date, name, and instruction against the source. Replace vague words (*many, soon, various, several, important*) with specific ones (*12 people, on 4 June, 3 steps*). If you cannot verify a claim, cut it or flag it.
 3. **Substantive** — delete decoration. Cut adjectives that do no work (*very, really, extremely, cutting-edge*). Add evidence where a claim needs it: a number, an example, a link, a step. If a sentence adds nothing, delete it.
 4. **Authentic** — read it as the reader. Remove corporate voice and false warmth (*We value your feedback!* when you do not act on it). Keep warmth that is real: a clear apology, a concrete next step, a human sign-off.
+
+### Worked RASA audit
+
+One stiff paragraph, audited end to end. The original is 82 words.
+
+**Original:**
+
+> We would like to take this opportunity to inform all residents that, due to unforeseen circumstances and in accordance with the ongoing improvement programme, the water supply in the northern district will be temporarily suspended for a period of approximately eight hours, commencing at midnight. Residents are kindly requested to make the necessary arrangements in advance, and we apologise for any inconvenience that may be caused by this essential maintenance work, which is being undertaken to facilitate the improvement of service delivery.
+
+**Scores before:**
+
+| Dimension | Score (0–2) | Evidence |
+|---|---|---|
+| Rhythmic | 0 | Two very long sentences; the reader stumbles on *in accordance with the ongoing improvement programme* and has to re-read. |
+| Accurate | 1 | The time is vague — midnight on which day, and *approximately* eight hours gives no end time. |
+| Substantive | 0 | Padding throughout (*take this opportunity, make the necessary arrangements*); no date, no end time, no useful detail. |
+| Authentic | 0 | Corporate voice throughout — *kindly requested, we apologise for any inconvenience* — no real person speaking. |
+| **Total** | **1/8 — fail** | Two dimensions score 0, so the text fails even before the total is counted. |
+
+**Rewritten:**
+
+> Water will be off in the northern district tonight, from midnight to 8 a.m.
+>
+> Fill your containers before midnight. You will have water again at 8 a.m.
+>
+> We are fixing the pipes to improve the water supply. We are sorry for the disruption.
+
+**Scores after:**
+
+| Dimension | Score (0–2) | Evidence |
+|---|---|---|
+| Rhythmic | 2 | Short sentences that flow when read aloud; one idea per sentence. |
+| Accurate | 2 | Exact window (midnight to 8 a.m.), exact place, exact action. |
+| Substantive | 2 | Every sentence adds something real: the outage, the action, the reason. |
+| Authentic | 1 | Sounds human and direct, but *We are sorry for the disruption* is still a standard apology. |
+| **Total** | **7/8 — pass** | Pass: total 6 or more, and no dimension scored 0. |
+
+Keep warmth that is real: a clear apology, a concrete next step, a human sign-off.
 
 ## Templates
 
@@ -471,6 +534,32 @@ Each pair: **Before** (bad) → **After** (good) → **Why** (the rule fixed).
 - **After:** "Your test results are ready. Sign in to see them."
 - **Why:** Two short sentences; no filler (*at your earliest convenience*).
 
+### 15. Legal / finance — fine print
+
+- **Before:** "Notwithstanding the foregoing, the account holder shall be responsible for the prompt settlement of all outstanding obligations, failing which late payment charges shall be imposed in accordance with the prevailing schedule of fees."
+- **After:** "Pay what you owe on time. If you pay late, we charge a late fee. The fee is in the fee list."
+- **Why:** Nominalization and legal filler (*notwithstanding the foregoing, shall be imposed*) replaced with active verbs and a concrete next step.
+
+### 16. Health — instructions
+
+- **Before:** "Medication should be taken twice daily, preferably with food, and the course of treatment should be completed in its entirety, even if symptoms improve prior to completion."
+- **After:** "Take this medicine twice a day, with food. Finish all of it, even if you feel better."
+- **Why:** Passive chain (*should be taken, should be completed*) turned into direct imperatives; *prior to completion* became *even if you feel better*.
+
+### 17. Error + retry flow
+
+- **Before:** "An unexpected error has occurred during the processing of your request. Please kindly try again at a later time. If the issue persists, please contact support."
+- **After:** "We could not upload your file. Try again now — your file is still there. If it fails again, contact support and quote code U-207."
+- **Why:** Says what failed and what to do now; *please kindly* pile-up and vague *at a later time* removed; a code makes the fallback usable.
+
+### 18. Long-form report — executive summary
+
+- **Before:** "This report provides a comprehensive overview of the various initiatives undertaken during the period under review, and it is important to note that, notwithstanding the challenges encountered, significant progress was made with regard to the implementation of the key strategic priorities."
+- **After:** "This report covers what we did in 2025. We finished 3 of our 5 goals. Hiring was slow, so 2 goals moved to 2026. Read page 2 for the numbers."
+- **Why:** Point first, with real numbers (3 of 5, 2 moved); *comprehensive overview* and *significant progress* decoration cut.
+
+- **Why:** Two short sentences; no filler (*at your earliest convenience*).
+
 ## Writing conventions
 
 ### Spelling and consistency
@@ -577,6 +666,16 @@ These rules apply to prose you produce: copy, guides, emails, reports, help text
 - **Explain the unfamiliar once:** the first time you use a local term, add a short gloss. *The GP (your local doctor)*.
 - **Numbers and dates:** use the international forms in this skill (4 June 2026, 14:00) and state the time zone.
 
+## Global English
+
+English is read everywhere. Write so a reader in another country, time zone, and culture can follow it without guessing.
+
+- **Avoid US-centric references.** Do not assume the reader knows US holidays, US sports, US agencies, or US place names. *The Monday after Thanksgiving* means nothing to most readers — write the date. *A home run* means nothing outside baseball — write *a big success*. If a local reference is unavoidable, explain it in one short gloss.
+- **Date and time clarity across time zones.** Always give the date in full (*4 June 2026*, never *06/04/2026* — readers disagree on which number is the month). Give the time with its time zone (*10 a.m. Jakarta time (WIB)*, or *14:00 UTC*). For a deadline, give both the date and the time zone, and say what happens after it. Never write *tomorrow* or *next Friday* without a date in a text that may be read later.
+- **Spelling consistency when quoting.** Pick US or UK spelling once and keep it in your own words — but do not "fix" quoted spelling to match. If a law, a book title, or a person's words use *organise*, quote *organise*, even if the rest of your text uses *organize*. A changed quote is a wrong quote. If the spelling difference might confuse the reader, add *[sic]* or a short note — do not silently edit it.
+
+- **Numbers and dates:** use the international forms in this skill (4 June 2026, 14:00) and state the time zone.
+
 ## Pitfalls
 
 ### Nominalizations — verbs turned into nouns
@@ -616,6 +715,52 @@ Three or more nouns in a row force the reader to unpack them.
 Cut these unless they change the meaning: *quite, very, really, just, actually, basically, various, several, possibly, perhaps, in order to, in fact, indeed, certainly, literally* (unless literal).
 
 ### Formal filler
+
+Cut these: *kindly, whereby, herein, aforementioned, henceforth, notwithstanding, pursuant to, in accordance with, please be advised, please note that, it is important to note that, as you are aware*.
+
+## Common mistakes
+
+Eight failures that appear again and again. Each one names the RASA dimension it breaks.
+
+1. **Burying the point**
+   - **Wrong:** "Following a thorough review of the current situation and after careful consideration of all relevant factors, we have decided to close the library on Monday."
+   - **Fix:** "The library is closed on Monday."
+   - **Breaks:** Substantive — the point is hidden under 20 words of build-up; Accurate — the reader cannot find the answer.
+
+2. **The "please kindly" pile-up**
+   - **Wrong:** "Please kindly be advised that you are kindly requested to please submit the form at your earliest convenience."
+   - **Fix:** "Please send the form by Friday 12 June."
+   - **Breaks:** Authentic — stacked politeness sounds like a template, not a person; Accurate — there is no date.
+
+3. **Noun stacks**
+   - **Wrong:** "user account security policy update notification"
+   - **Fix:** "We updated the policy on account security."
+   - **Breaks:** Rhythmic — the reader has to unpack four nouns in a row before reaching a verb.
+
+4. **Fake urgency**
+   - **Wrong:** "Act now! Only 2 left! This offer ends tonight — do not miss out!"
+   - **Fix:** "The offer ends on Friday 12 June at midnight Jakarta time (WIB). Two places are left."
+   - **Breaks:** Authentic — pressure that is not literally true destroys trust; Accurate — no real date or number is given.
+
+5. **The passive chain**
+   - **Wrong:** "The form was completed and was submitted, after which it was processed and was approved by the committee."
+   - **Fix:** "You filled in the form and sent it. We processed it. The committee approved it."
+   - **Breaks:** Accurate — the reader cannot tell who did what; Rhythmic — the repeated *was* drags the sentence.
+
+6. **Numbers without context**
+   - **Wrong:** "Satisfaction decreased by 18% and engagement increased significantly."
+   - **Fix:** "Satisfaction fell from 80% to 62%. Engagement rose from 40% to 47%."
+   - **Breaks:** Accurate — *18%* of what, and *significantly* means nothing without a number; Substantive — the claim has no evidence.
+
+7. **The apologetic hedge**
+   - **Wrong:** "We are very sorry, but unfortunately we are unable to help you at this time, although we do hope you understand."
+   - **Fix:** "We cannot help with this. Here is what you can do instead: call 021 555 0142."
+   - **Breaks:** Authentic — a hedge that apologises three times and offers nothing sounds insincere; Substantive — no next step.
+
+8. **The template voice**
+   - **Wrong:** "We value your business and your feedback is important to us. Thank you for being a valued customer."
+   - **Fix:** "Thank you. We read every message, and we reply within 2 working days."
+   - **Breaks:** Authentic — stock phrases with no real commitment; Substantive — the sentence says nothing the reader can use.
 
 Cut these: *kindly, whereby, herein, aforementioned, henceforth, notwithstanding, pursuant to, in accordance with, please be advised, please note that, it is important to note that, as you are aware*.
 
@@ -679,6 +824,35 @@ After finishing — in Write mode, or after approved fixes in Review mode — ou
 ### Deliberately kept — and why
 - [Thing kept, e.g. a technical term, a long sentence, a passive — and the reason]
 ```
+
+If a RASA dimension scores 0, say so plainly and fix it before delivery. Never report a pass that did not happen.
+
+## Appendix — Bilingual bridge (English ↔ Bahasa Indonesia)
+
+A shared glossary so teams working in both languages use the same terms. The sibling skill bahasa-indonesia-plain uses the same glossary.
+
+| English | Bahasa Indonesia |
+|---|---|
+| plain language | bahasa polos |
+| Rhythmic | Ritmis |
+| Accurate | Akurat |
+| Substantive | Sarat Makna |
+| Authentic | Alami |
+| call to action | ajakan |
+| form of address | sapaan |
+| active voice | kalimat aktif |
+| passive voice | kalimat pasif |
+| inverted pyramid | piramida terbalik |
+| everyday word | kata sehari-hari |
+| jargon | jargon |
+| cliché | klise |
+| checklist | daftar periksa |
+| delivery report | laporan penyerahan |
+| error message | pesan error |
+| empty state | empty state |
+| onboarding | onboarding |
+| dyscalculia | diskalkulia |
+| screen reader | pembaca layar |
 
 If a RASA dimension scores 0, say so plainly and fix it before delivery. Never report a pass that did not happen.
 
