@@ -268,3 +268,77 @@ Posisi dan jumlah lowongan ada di judul — pembaca langsung tahu apakah lowonga
 ### Yang berubah
 
 "Kendala operasional di luar kendali kami" diganti penyebab yang sebenarnya: cuaca buruk, dan lokasi paket saat ini. Tanggal lama dan tanggal baru ditulis berdampingan supaya pembaca bisa menghitung sendiri keterlambatannya. Permintaan maaf ada di akhir, setelah fakta — bukan sebagai pengganti fakta.
+
+---
+
+## 13. Ketentuan kecil pinjaman (legal / keuangan)
+
+### Sebelum
+
+> Dengan menekan tombol setuju, Anda menyatakan telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku, termasuk namun tidak terbatas pada ketentuan mengenai biaya layanan, kebijakan pengembalian dana, dan perubahan tarif yang dapat dilakukan sewaktu-waktu tanpa pemberitahuan terlebih dahulu.
+>
+> Apabila Anda tidak menyetujui sebagian atau seluruh ketentuan tersebut, Anda diharapkan untuk tidak melanjutkan penggunaan layanan ini. Segala bentuk perselisihan yang timbul sehubungan dengan penggunaan layanan ini akan diselesaikan sesuai dengan ketentuan hukum yang berlaku di wilayah Republik Indonesia.
+
+### Sesudah
+
+> **Dengan menekan Setuju, Anda menyetujui syarat dan ketentuan ini.**
+>
+> Syarat itu mencakup biaya layanan dan kebijakan pengembalian dana. Kami akan memberi tahu Anda sebelum tarif berubah — tarif tidak berubah diam-diam.
+>
+> Kalau Anda tidak setuju, jangan lanjutkan. Anda bisa berhenti kapan saja tanpa biaya.
+>
+> Kalau ada perselisihan, penyelesaiannya mengikuti hukum yang berlaku di Indonesia. Kami akan menjelaskan langkah-langkahnya kepada Anda sebelum proses itu dimulai.
+
+### Yang berubah
+
+Klausul "dapat berubah sewaktu-waktu tanpa pemberitahuan" — yang paling merugikan pembaca — diganti janji pemberitahuan yang jelas. Satu paragraf berisi tiga hal (persetujuan, penolakan, perselisihan) dipecah menjadi empat paragraf pendek, masing-masing satu topik. Pembaca yang tidak setuju diberi jalan keluar yang eksplisit: berhenti tanpa biaya.
+
+---
+
+## 14. Petunjuk minum obat dan pantangan (kesehatan)
+
+### Sebelum
+
+> Pasien diharapkan untuk mengonsumsi obat tersebut sesuai dengan dosis yang telah ditentukan oleh dokter yang menangani, yaitu 2 (dua) kali sehari sesudah makan pagi dan makan malam, dan apabila pasien lupa mengonsumsi obat pada waktunya, pasien dapat mengonsumsi obat tersebut segera setelah teringat, kecuali apabila sudah mendekati waktu dosis berikutnya, maka dosis yang terlewat tersebut tidak perlu dikonsumsi dan pasien dapat melanjutkan jadwal sebagaimana biasa tanpa menggandakan dosis.
+>
+> Selama menjalani pengobatan ini, pasien diharapkan untuk menghindari konsumsi minuman beralkohol dan obat-obatan lain tanpa berkonsultasi terlebih dahulu dengan dokter yang menangani, dikarenakan hal tersebut dapat menimbulkan interaksi obat yang tidak diinginkan dan dapat membahayakan kondisi kesehatan pasien.
+
+### Sesudah
+
+> **Cara minum obat ini**
+>
+> Minum 2 kali sehari, sesudah makan pagi dan sesudah makan malam.
+>
+> **Kalau lupa minum:** minum segera setelah Anda ingat. Kalau sudah dekat waktu minum berikutnya, lewati dosis yang terlupa — jangan minum dua dosis sekaligus.
+>
+> **Yang harus dihindari:** jangan minum alkohol selama pengobatan ini. Jangan minum obat lain tanpa bertanya dulu ke dokter — obat lain bisa bereaksi dengan obat ini dan membahayakan Anda.
+>
+> **Kalau ada keluhan:** hentikan obat dan hubungi dokter Anda. Bawa kotak obat ini saat Anda berobat.
+
+### Yang berubah
+
+Dua paragraf berisi enam aturan dipecah menjadi empat bagian berjudul — cara minum, kalau lupa, yang dihindari, kalau ada keluhan — supaya pembaca bisa menemukan aturan yang dicarinya tanpa membaca semuanya. Aturan keselamatan ("jangan minum dua dosis sekaligus", "jangan minum alkohol") ditulis sebagai perintah langsung, bukan disembunyikan di tengah kalimat panjang. "Bawa kotak obat ini" ditambahkan sebagai langkah konkret saat berobat.
+
+---
+
+## 15. Ringkasan eksekutif laporan tahunan
+
+### Sebelum
+
+> Pada tahun 2026 ini, program pemberdayaan masyarakat yang telah dilaksanakan oleh tim kami di sejumlah wilayah telah menunjukkan perkembangan yang cukup baik dan memberikan dampak yang positif bagi masyarakat penerima manfaat, dengan berbagai macam kegiatan yang telah dilakukan, mulai dari pelatihan keterampilan, pendampingan usaha kecil, hingga pemberian bantuan modal usaha, dan diharapkan program ini dapat terus berlanjut serta memberikan manfaat yang lebih besar lagi pada periode-periode berikutnya, seiring dengan peningkatan kualitas pelaksanaan program dan dukungan dari berbagai pihak yang terkait.
+>
+> Adapun tantangan yang dihadapi dalam pelaksanaan program ini antara lain adalah keterbatasan jumlah pendamping lapangan serta keterbatasan anggaran yang tersedia, sehingga beberapa kegiatan belum dapat dilaksanakan secara optimal sebagaimana yang telah direncanakan sebelumnya.
+
+### Sesudah
+
+> **Program pemberdayaan masyarakat menjangkau 12.400 warga di 48 desa pada 2026.**
+>
+> Tiga kegiatan utama berjalan: pelatihan keterampilan untuk 4.800 warga, pendampingan usaha kecil untuk 2.100 usaha, dan bantuan modal untuk 900 usaha. Pendapatan rata-rata peserta naik 22% — dari Rp1,8 juta menjadi Rp2,2 juta per bulan.
+>
+> Tantangan terbesar: 3 dari 12 kabupaten belum punya pendamping lapangan. Akibatnya, 9 desa belum mendapat pendampingan sama sekali.
+>
+> Anggaran 2027: Rp1,8 miliar. Sebesar Rp480 juta di antaranya untuk merekrut 12 pendamping baru, supaya semua desa terjangkau. Kami minta persetujuan anggaran ini sebelum 31 Desember 2026.
+
+### Yang berubah
+
+"Cukup baik" dan "dampak yang positif" diganti angka yang bisa diperiksa: 12.400 warga, 48 desa, 22% kenaikan pendapatan, dari Rp1,8 juta menjadi Rp2,2 juta. Tantangan tidak lagi ditulis sebagai kalimat umum tentang "keterbatasan" — ditulis sebagai jumlah kabupaten dan desa yang belum terjangkau, plus akibatnya. Paragraf terakhir berubah dari harapan umum menjadi permintaan keputusan yang konkret: angka anggaran, untuk apa, dan tenggat persetujuannya.

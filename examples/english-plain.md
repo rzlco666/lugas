@@ -269,3 +269,67 @@ Full before/after rewrites. Each example shows a longer passage, not a one-liner
 > [Search for items]
 
 **What changed:** Four words for the title. One sentence explains the section. The button is the action. *Utilise*, *for your convenience*, and *for later viewing* — all filler — are gone.
+
+---
+
+## 15. Legal / finance — fine print on late fees
+
+**Before:**
+
+> Notwithstanding the foregoing, the account holder shall be responsible for the prompt settlement of all outstanding obligations, failing which late payment charges shall be imposed in accordance with the prevailing schedule of fees. The account holder is further advised that, in the event of continued non-payment, the account may be suspended without further notice, and any and all costs associated with the recovery of outstanding amounts shall be borne by the account holder.
+
+> For the avoidance of doubt, the terms and conditions set out herein shall apply to all accounts, irrespective of the date on which the account was opened, and may be amended from time to time at the sole discretion of the provider.
+
+**After:**
+
+> Pay what you owe on time. If you pay late, we charge a late fee. The fee is in the fee list.
+>
+> If you do not pay for 3 months, we may close your account. We will tell you before we do that. If we have to collect the money you owe, you pay the collection cost.
+>
+> These rules apply to all accounts. We may change them. If we do, we will tell you 30 days before the change starts.
+
+**What changed:** *The account holder* became *you*, and the passive chain (*shall be imposed, shall be borne*) became active verbs. The vague *without further notice* is replaced with a real promise (we will tell you first). The second paragraph, which only said "these rules apply and may change", now says when the reader will be told about a change.
+
+---
+
+## 16. Health — how to take your medicine
+
+**Before:**
+
+> Medication should be taken twice daily, preferably with food, and the course of treatment should be completed in its entirety, even if symptoms improve prior to completion. In the event that a dose is missed, the patient should take the missed dose as soon as it is remembered, unless it is almost time for the next dose, in which case the missed dose should be skipped and the regular schedule resumed. Under no circumstances should a double dose be taken.
+
+> If side effects are experienced, including but not limited to nausea, dizziness, or rash, medical advice should be sought promptly. Please do not hesitate to contact your doctor if you have any questions or concerns regarding your treatment.
+
+**After:**
+
+> Take this medicine twice a day, with food. Finish all of it, even if you feel better.
+>
+> If you miss a dose, take it as soon as you remember. If it is almost time for your next dose, skip the missed dose. Take only one dose at a time — never take two at once.
+>
+> If you feel sick, dizzy, or get a rash, call your doctor the same day. The number is on your prescription.
+>
+> If you are not sure about anything, call your doctor. That is what the number is for.
+
+**What changed:** Passive instructions (*should be taken, should be sought*) became direct imperatives in *you*-voice, one action per sentence. The missed-dose rule, which was one long conditional sentence, is now three short sentences a worried reader can follow. *Do not hesitate to contact us* is replaced with a concrete reason to call and where to find the number.
+
+---
+
+## 17. Report — executive summary
+
+**Before:**
+
+> This report provides a comprehensive overview of the various initiatives undertaken during the period under review, and it is important to note that, notwithstanding the challenges encountered, significant progress was made with regard to the implementation of the key strategic priorities. Furthermore, the organisation remains committed to the ongoing improvement of service delivery and to the enhancement of stakeholder engagement across all areas of operation.
+
+> The findings set out in this report are based on extensive consultation with a large number of stakeholders, and they indicate that, while overall satisfaction levels remain broadly positive, there are a number of areas in which further work is required. Detailed recommendations are set out in the final section of this report.
+
+**After:**
+
+> This report covers what we did in 2025. We finished 3 of our 5 goals.
+>
+> Hiring was slow, so 2 goals moved to 2026: the new booking system and the staff training programme. Both start in March 2026.
+>
+> We spoke to 120 people: 80 staff and 40 members of the public. Satisfaction is 78%, up from 74% in 2024. The main complaint is waiting time: 35% of people waited more than 20 minutes.
+>
+> Our main recommendation is on page 12: hire 6 more staff for the front desk. That would cut waiting time to under 10 minutes.
+
+**What changed:** The point is first — 3 of 5 goals finished — instead of a *comprehensive overview* that says nothing. Vague words (*significant progress, a large number, broadly positive*) became numbers (3 of 5, 120 people, 78%, 35%). The summary names the two delayed goals, the reason, and the start date, and it points to the one recommendation that matters, with its page number.
